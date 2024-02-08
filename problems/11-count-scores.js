@@ -28,7 +28,19 @@ console.log(countScores(peeps)); //=> { Anthony: 4, Fred: 4, Winnie: 6 }
 ***********************************************************************/
 
 function countScores(people) {
-  // Your code here 
+  let totalScores = {};
+  //iterate through each person
+  //get their first score
+  //if they have another input score, add it
+  for (let person of people) {
+    if (totalScores[person.name] === undefined) {
+      totalScores[person.name] = person.score;
+    } else {
+      totalScores[person.name] += person.score;
+    }
+  }
+
+  return totalScores;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

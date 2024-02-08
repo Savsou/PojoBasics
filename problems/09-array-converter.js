@@ -12,7 +12,20 @@ console.log(arrayConverter(["apple", "banana", "potato", "banana"])); // => {app
 ***********************************************************************/
 
 function arrayConverter(array) {
-  // Your code here 
+  //count is in an object
+  let counter = {};
+  //iterate through the array
+  //if not in the object, add into the array
+  //if it is in the object, increment
+  for (let value of array) {
+    if (counter[value] === undefined) {
+      counter[value] = 1;
+    } else {
+      counter[value]++;
+    }
+  }
+
+  return counter;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
